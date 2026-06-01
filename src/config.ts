@@ -71,6 +71,7 @@ export const siteConfig = {
         "Koin",
         "WebSockets",
         "Firebase",
+        "Analytics",
         "MapLibre",
       ],
     },
