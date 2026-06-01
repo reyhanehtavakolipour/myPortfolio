@@ -58,7 +58,7 @@ export const siteConfig = {
     {
       name: "Cobalt",
       description:
-        "Solo end-to-end Kotlin Multiplatform implementation of an enterprise incident response and security operations app for Android and iOS. The project combines shared Compose UI, domain, and data layers for authentication, incident templates, task response flows, notification dispatch and status tracking, document sync, Twilio-backed team chat, patrol management, live maps, location updates, NFC checkpoints, and push-driven realtime updates. The architecture uses feature-first clean modules, Koin dependency injection, Ktor safe-call and session refresh infrastructure, Room KMP caching with migrations, background sync, WebSocket reconnection, Crashlytics observability, and native Android/Swift bridges where platform APIs require it.",
+        "Solo end-to-end Kotlin Multiplatform implementation of an enterprise incident response and security operations app for Android and iOS. The project combines shared Compose UI, domain, and data layers for authentication, incident templates, task response flows, notification dispatch and status tracking, document sync, Twilio-backed team chat, patrol management, live maps, location updates, NFC checkpoints, and push-driven realtime updates. The architecture uses feature-first clean modules, optimistic state handling, prefetching for smoother user experience, Koin dependency injection, Ktor safe-call and session refresh infrastructure, Room KMP caching with migrations, background sync, WebSocket reconnection, Crashlytics observability, and native Android/Swift bridges where platform APIs require it.",
       skills: [
         "Kotlin Multiplatform",
         "Compose Multiplatform",
