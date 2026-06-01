@@ -57,8 +57,11 @@ export const siteConfig = {
     },
     {
       name: "Cobalt",
-      description:
-        "Solo end-to-end Kotlin Multiplatform implementation of an enterprise incident response and security operations app for Android and iOS. The project combines shared Compose UI, domain, and data layers for authentication, incident templates, task response flows, notification dispatch and status tracking, document sync, Twilio-backed team chat, patrol management, live maps, location updates, NFC checkpoints, and push-driven realtime updates. The architecture uses feature-first clean modules, optimistic state handling, prefetching for smoother user experience, Koin dependency injection, Ktor safe-call and session refresh infrastructure, Room KMP caching with migrations, background sync, WebSocket reconnection, Crashlytics observability, and native Android/Swift bridges where platform APIs require it.",
+      description: [
+        "Solo end-to-end Kotlin Multiplatform implementation of an enterprise incident response and security operations app for Android and iOS. The project combines shared Compose UI, domain, and data layers for authentication, incident templates, task response flows, notification dispatch and status tracking, document sync, Twilio-backed team chat, patrol management, live maps, location updates, NFC checkpoints, and push-driven realtime updates.",
+        "The architecture uses feature-first clean modules, optimistic state handling, prefetching for smoother user experience, Koin dependency injection, Ktor safe-call and session refresh infrastructure, Room KMP caching with migrations, background sync, WebSocket reconnection, and native Android/Swift bridges where platform APIs require it.",
+        "I structured Crashlytics and analytics-style observability as part of the app architecture: when something fails, non-fatal errors are reported with useful diagnostic context such as user id, organization, route trail, failing function/domain/code, endpoint or payload metadata, and feature-specific keys. This makes production issues faster to reproduce, triage, and trace back to the root cause instead of relying on generic crash reports.",
+      ],
       skills: [
         "Kotlin Multiplatform",
         "Compose Multiplatform",
