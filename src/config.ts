@@ -39,9 +39,9 @@ export const siteConfig = {
       ],
     },
     {
-      name: "MasterPie",
+      name: "MasterPie (Startup Project)",
       description:
-        "Flutter macro-planning and food portion calculator that helps users build meal plans around target calories, protein, carbohydrates, and fat. The app uses a feature-first clean architecture with BLoC, use cases, repository contracts, encrypted local storage, Supabase-backed user data, FatSecret nutrition APIs, AI-assisted meal suggestions, subscription flows, Firebase Crashlytics, and a full food workflow covering search, recipes, favorites, cookbook management, logging, and profile-based macro goals.",
+        "Flutter macro-planning and food portion calculator that helps users build meal plans around target calories, protein, carbohydrates, and fat. I spoke directly with users to understand their needs, then translated those insights into product scope and technical decisions. The app uses a feature-first clean architecture with BLoC, use cases, repository contracts, encrypted local storage, Supabase-backed user data, FatSecret nutrition APIs, AI-assisted meal suggestions, subscription flows, Firebase Crashlytics, and a full food workflow covering search, recipes, favorites, cookbook management, logging, and profile-based macro goals.",
       link: "https://github.com/reyhanehtavakolipour/masterpie",
       skills: [
         "Flutter",
