@@ -1,92 +1,77 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Reyhaneh Tavakolipour",
+  title: "Senior Android and KMP Developer",
+  description: "Portfolio website of Reyhaneh Tavakolipour",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "reyhanehtavakolipour@gmail.com",
+    linkedin: "https://www.linkedin.com/in/reyhaneh-tavakolipour/",
+    github: "https://github.com/reyhanehtavakolipour",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "I'm a Senior Mobile Developer with 9+ years of experience building Android and cross-platform applications. I'm passionate about system design, clean architecture, and creating software that is scalable, maintainable, and easy to evolve. Over the years, I've worked on both startup and enterprise products, taking ownership of architecture, development, and long-term product growth. More recently, I've focused on Kotlin Multiplatform, building cross-platform applications from the ground up while maintaining production Android and iOS apps. I enjoy solving complex technical challenges and turning ideas into reliable, user-focused products.",
+  skills: [
+    "Designs scalable Android architectures with clear separation between domain, data, and presentation layers.",
+    "Strong focus on offline-first and single source of truth patterns in production apps.",
+    "Experienced in evolving legacy Android codebases into modular, testable systems.",
+    "Owns features end-to-end from design discussions to production rollout.",
+    "Builds resilient apps with offline support, caching strategies, and graceful API failure handling.",
+    "Strong experience with production debugging and crash reduction.",
+    "Works closely with designers, backend engineers, and product managers in agile teams.",
+    "Leads full-cycle development of Kotlin Multiplatform applications from technical system design and architecture decisions to implementation and production deployment across Android and iOS.",
+    "CI/CD pipeline ownership for automated Android builds, testing, and production deployments with a focus on reliability and release efficiency.",
+  ],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "News App",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
-      description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "ExtensionKit",
-      description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-  ],
-  experience: [
-    {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
-      bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Offline-first Android news application built around clean architecture, single source of truth, and custom pagination. The app prioritizes fast perceived performance by showing cached content immediately, refreshing remote data in the background, preserving feed and scroll stability, and handling API failures, duplicates, cache eviction, bookmarks, and battery-aware prefetching with carefully scoped loading and error states.",
+      link: "https://github.com/reyhanehtavakolipour/CleanNewsApp",
+      skills: [
+        "Kotlin",
+        "Jetpack Compose",
+        "Clean Architecture",
+        "Room",
+        "Ktor",
+        "Koin",
+        "Offline-first",
+        "Custom Pagination",
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
-      bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
+      name: "MasterPie",
+      description:
+        "Flutter macro-planning and food portion calculator that helps users build meal plans around target calories, protein, carbohydrates, and fat. The app uses a feature-first clean architecture with BLoC, use cases, repository contracts, encrypted local storage, Supabase-backed user data, FatSecret nutrition APIs, AI-assisted meal suggestions, subscription flows, Firebase Crashlytics, and a full food workflow covering search, recipes, favorites, cookbook management, logging, and profile-based macro goals.",
+      link: "https://github.com/reyhanehtavakolipour/masterpie",
+      skills: [
+        "Flutter",
+        "Dart",
+        "BLoC",
+        "Clean Architecture",
+        "Supabase",
+        "Firebase",
+        "Encrypted SQLite",
+        "FatSecret API",
+        "OpenAI API",
       ],
     },
     {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
+      name: "Cobalt",
+      description:
+        "Solo end-to-end Kotlin Multiplatform implementation of an enterprise incident response and security operations app for Android and iOS. The project combines shared Compose UI, domain, and data layers for authentication, incident templates, task response flows, notification dispatch and status tracking, document sync, Twilio-backed team chat, patrol management, live maps, location updates, NFC checkpoints, and push-driven realtime updates. The architecture uses feature-first clean modules, Koin dependency injection, Ktor safe-call and session refresh infrastructure, Room KMP caching with migrations, background sync, WebSocket reconnection, Crashlytics observability, and native Android/Swift bridges where platform APIs require it.",
+      skills: [
+        "Kotlin Multiplatform",
+        "Compose Multiplatform",
+        "Clean Architecture",
+        "Ktor",
+        "Room KMP",
+        "Koin",
+        "WebSockets",
+        "Firebase",
+        "MapLibre",
       ],
     },
   ],
-  education: [
-    {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
-      achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
-      ],
-    },
-    {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
-    },
-  ],
+  experience: [],
+  education: [],
 };
