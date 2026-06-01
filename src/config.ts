@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Reyhaneh Tavakolipour",
   title: "Senior Android and KMP Developer",
   description: "Portfolio website of Reyhaneh Tavakolipour",
-  accentColor: "#1d4ed8",
+  accentColor: "#ea580c",
   social: {
     email: "reyhanehtavakolipour@gmail.com",
     linkedin: "https://www.linkedin.com/in/reyhaneh-tavakolipour/",
