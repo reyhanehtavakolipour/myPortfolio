@@ -1,6 +1,14 @@
 ---
 import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const getAssetPath = (path: string) => {
+  if (/^(https?:)?\/\//.test(path) || path.startsWith("data:")) {
+    return path;
+  }
+
+  const basePath = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+  return `${basePath}${path.replace(/^\/+/, "")}`;
+};
 ---
 
 {
@@ -25,6 +33,12 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                 const descriptionParagraphs = Array.isArray(project.description)
                   ? project.description
                   : [project.description];
+                const screenshots =
+                  "screenshots" in project
+                    ? project.screenshots
+                    : "screenshot" in project
+                      ? [project.screenshot]
+                      : [];
                 const linkProps = project.link
                   ? {
                       href: project.link,
@@ -61,40 +75,76 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         </div>
                       )}
 
-                      <div class="space-y-4">
-                        <div>
-                          <span
-                            class="text-sm font-mono"
-                            style={{ color: siteConfig.accentColor }}
-                          >
-                            0{index + 1}
-                          </span>
-                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {project.name}
-                          </h3>
-                        </div>
+                      <div
+                        class={`grid gap-6 ${
+                          screenshots.length === 1
+                            ? "md:grid-cols-[220px_1fr] md:items-start"
+                            : ""
+                        }`}
+                      >
+                        {screenshots.length === 1 && (
+                          <div class="mx-auto w-full max-w-[220px] overflow-hidden rounded-lg border border-gray-200 bg-white p-2 shadow-sm">
+                            <img
+                              src={getAssetPath(screenshots[0])}
+                              alt={`${project.name} screenshot`}
+                              loading="lazy"
+                              class="h-auto w-full object-contain"
+                            />
+                          </div>
+                        )}
 
-                        <div
-                          class={`space-y-3 text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
-                        >
-                          {descriptionParagraphs.map((paragraph) => (
-                            <p>{paragraph}</p>
-                          ))}
-                        </div>
-
-                        {project.skills && project.skills.length > 0 && (
-                          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
-                            {project.skills.map((skill) => (
-                              <span
-                                class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
-                                  project.link ? "group-hover:bg-gray-800" : ""
-                                }`}
-                              >
-                                {skill}
-                              </span>
+                        {screenshots.length > 1 && (
+                          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:pr-14 md:pr-16">
+                            {screenshots.map((screenshot, screenshotIndex) => (
+                              <div class="mx-auto w-full max-w-[220px] overflow-hidden rounded-lg border border-gray-200 bg-white p-1.5 shadow-sm sm:max-w-[170px]">
+                                <img
+                                  src={getAssetPath(screenshot)}
+                                  alt={`${project.name} screenshot ${screenshotIndex + 1}`}
+                                  loading="lazy"
+                                  class="h-auto w-full object-contain"
+                                />
+                              </div>
                             ))}
                           </div>
                         )}
+
+                        <div class="min-w-0 space-y-4">
+                          <div>
+                            <span
+                              class="text-sm font-mono"
+                              style={{ color: siteConfig.accentColor }}
+                            >
+                              0{index + 1}
+                            </span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                              {project.name}
+                            </h3>
+                          </div>
+
+                          <div
+                            class={`space-y-3 text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
+                          >
+                            {descriptionParagraphs.map((paragraph) => (
+                              <p>{paragraph}</p>
+                            ))}
+                          </div>
+
+                          {project.skills && project.skills.length > 0 && (
+                            <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
+                              {project.skills.map((skill) => (
+                                <span
+                                  class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
+                                    project.link
+                                      ? "group-hover:bg-gray-800"
+                                      : ""
+                                  }`}
+                                >
+                                  {skill}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </Component>
                   </div>

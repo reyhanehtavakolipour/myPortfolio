@@ -24,6 +24,7 @@ export const siteConfig = {
   projects: [
     {
       name: "News App",
+      screenshot: "/projects/clean-news-app.png",
       description:
         "Offline-first Android news application built around clean architecture, single source of truth, and custom pagination. The app prioritizes fast perceived performance by showing cached content immediately, refreshing remote data in the background, preserving feed and scroll stability, and handling API failures, duplicates, cache eviction, bookmarks, and battery-aware prefetching with carefully scoped loading and error states.",
       link: "https://github.com/reyhanehtavakolipour/CleanNewsApp",
@@ -40,6 +41,11 @@ export const siteConfig = {
     },
     {
       name: "MasterPie (Startup Project)",
+      screenshots: [
+        "/projects/masterpie-food-combinations.jpg",
+        "/projects/masterpie-recipe.jpg",
+        "/projects/masterpie-meal-plan.jpg",
+      ],
       description:
         "Flutter macro-planning and food portion calculator that helps users build meal plans around target calories, protein, carbohydrates, and fat. I spoke directly with users to understand their needs, then translated those insights into product scope and technical decisions. The app uses a feature-first clean architecture with BLoC, use cases, repository contracts, encrypted local storage, Supabase-backed user data, FatSecret nutrition APIs, AI-assisted meal suggestions, subscription flows, Firebase Crashlytics, and a full food workflow covering search, recipes, favorites, cookbook management, logging, and profile-based macro goals.",
       link: "https://github.com/reyhanehtavakolipour/masterpie",
@@ -57,6 +63,11 @@ export const siteConfig = {
     },
     {
       name: "Cobalt",
+      screenshots: [
+        "/projects/cobalt-alert-form.jpg",
+        "/projects/cobalt-tracking-patrol.jpg",
+        "/projects/cobalt-monitor.jpg",
+      ],
       description: [
         "Solo end-to-end Kotlin Multiplatform implementation of an enterprise incident response and security operations app for Android and iOS. The project combines shared Compose UI, domain, and data layers for authentication, incident templates, task response flows, notification dispatch and status tracking, document sync, Twilio-backed team chat, patrol management, live maps, location updates, NFC checkpoints, and push-driven realtime updates.",
         "The architecture uses feature-first clean modules, optimistic state handling, prefetching for smoother user experience, Koin dependency injection, Ktor safe-call and session refresh infrastructure, Room KMP caching with migrations, background sync, WebSocket reconnection, and native Android/Swift bridges where platform APIs require it.",
