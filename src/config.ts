@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Reyhaneh Tavakolipour",
-  title: "Senior Android and KMP Developer",
+  title: "Senior Android and KMP Engineer",
   description: "Portfolio website of Reyhaneh Tavakolipour",
   accentColor: "#ea580c",
   social: {
@@ -9,7 +9,7 @@ export const siteConfig = {
     github: "https://github.com/reyhanehtavakolipour",
   },
   aboutMe:
-    "I'm a Senior Mobile Developer with 9+ years of experience building Android and cross-platform applications. I'm passionate about system design, clean architecture, and creating software that is scalable, maintainable, and easy to evolve. Over the years, I've worked on both startup and enterprise products, taking ownership of architecture, development, and long-term product growth. More recently, I've focused on Kotlin Multiplatform, building cross-platform applications from the ground up while maintaining production Android and iOS apps. I enjoy solving complex technical challenges and turning ideas into reliable, user-focused products.",
+    "I'm a Senior Mobile Engineer with 9+ years of experience building Android(Kotlin) and cross-platform applications. I'm passionate about system design, clean architecture, and creating software that is scalable, maintainable, and easy to evolve. Over the years, I've worked on both startup and enterprise products, taking ownership of architecture, development, and long-term product growth. More recently, I've focused on Kotlin Multiplatform, building cross-platform applications from the ground up while maintaining production Android and iOS apps. I enjoy solving complex technical challenges and turning ideas into reliable, user-focused products.",
   skills: [
     "Designs scalable Android architectures with clear separation between domain, data, and presentation layers.",
     "Strong focus on offline-first and single source of truth patterns in production apps.",
@@ -17,6 +17,7 @@ export const siteConfig = {
     "Owns features end-to-end from design discussions to production rollout.",
     "Builds resilient apps with offline support, caching strategies, and graceful API failure handling.",
     "Strong experience with production debugging and crash reduction.",
+    "Uses A/B testing to validate product changes, measure impact, and guide rollout decisions.",
     "Works closely with designers, backend engineers, and product managers in agile teams.",
     "Leads full-cycle development of Kotlin Multiplatform applications from technical system design and architecture decisions to implementation and production deployment across Android and iOS.",
     "CI/CD pipeline ownership for automated Android builds, testing, and production deployments with a focus on reliability and release efficiency.",
@@ -81,8 +82,10 @@ export const siteConfig = {
         "Room KMP",
         "Koin",
         "WebSockets",
+        "GraphQL",
         "Firebase",
         "Analytics",
+        "A/B Testing",
         "MapLibre",
       ],
     },
